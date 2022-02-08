@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/menurounded"
+        android:gravity="left"
+
+        >
+
+        <TextView
+            android:id="@+id/headertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to go to the menu:"
+            android:textSize="30dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/menubutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="317dp"
+            android:onClick="menu"
+            android:text="@string/menu"
+            />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/topleftbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded"
+        android:onClick="increment"
+        android:text="@string/_0"
+        android:textSize="50sp"
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintWidth_percent=".49" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toprightbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded"
+        android:onClick="increment"
+        android:text="@string/_0"
+        android:textSize="50sp"
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintWidth_percent=".49"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bottomleftbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded"
+        android:onClick="increment"
+        android:text="@string/_0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topleftbutton"
+        app:layout_constraintWidth_percent=".49" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bottomrightbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded"
+        android:onClick="increment"
+        android:text="@string/_0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toprightbutton"
+        app:layout_constraintWidth_percent=".49" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
